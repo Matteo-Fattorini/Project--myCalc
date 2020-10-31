@@ -71,7 +71,7 @@ divideEl.addEventListener("click", function () {
 });
 
 percentEl.addEventListener("click", function () {
-  resultEl.innerHTML += " Best Calc Ever ";
+  resultEl.innerHTML += " Best Calc";
 });
 
 delEl.addEventListener("click", function () {
@@ -99,9 +99,6 @@ equalsEl.addEventListener("click", function () {
   var secondNumber = "";
 
 
-
-
-
   for (var i = 0; i < resultEl.innerHTML.length; i++) {
     if (!isNaN(resultEl.innerHTML[i]) || resultEl.innerHTML[i] == ".") {
       firstNumber += resultEl.innerHTML[i];
@@ -117,13 +114,13 @@ equalsEl.addEventListener("click", function () {
   }
 
   if (sign == "+") {
-    resultEl.innerHTML = parseFloat(firstNumber) + parseFloat(secondNumber);
+    resultEl.innerHTML = (parseFloat(firstNumber) + parseFloat(secondNumber)).toFixed(5);
   } else if (sign == "-") {
-    resultEl.innerHTML = parseInt(firstNumber) - parseFloat(secondNumber);
+    resultEl.innerHTML = (parseInt(firstNumber) - parseFloat(secondNumber)).toFixed(5);
   } else if (sign == "x") {
-    resultEl.innerHTML = parseFloat(firstNumber) * parseFloat(secondNumber);
+    resultEl.innerHTML = (parseFloat(firstNumber) * parseFloat(secondNumber)).toFixed(5);
   } else if (sign == "/") {
-    resultEl.innerHTML = parseFloat(firstNumber) / parseFloat(secondNumber);
+    resultEl.innerHTML = (parseFloat(firstNumber) / parseFloat(secondNumber)).toFixed(5);
   }
 
   if (isNaN(resultEl.innerHTML)) {
