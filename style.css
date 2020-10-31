@@ -21,9 +21,14 @@ h1 {
   width: 100vw;
 }
 
-.container {
-  display: grid;
+#result {
+  overflow: hidden;
+}
 
+.container {
+  max-width: 600px;
+  display: grid;
+  overflow: hidden;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-gap: 10px;
   text-align: center;
